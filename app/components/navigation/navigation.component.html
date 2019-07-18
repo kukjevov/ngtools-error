@@ -1,0 +1,51 @@
+<div class="absolute active-wrapper" [style.top.px]="activeTop">
+    <div class="active-base primary-background-inv relative"
+         [class.active-top]="activeEnabled">
+        <div class="absolute full-height full-width primary-background"></div>
+    </div>
+
+    <div class="active-base"
+         [class.active-back]="activeEnabled"
+         [style.height.px]="activeHeight"></div>
+
+    <div class="active-base primary-background-inv relative"
+         [class.active-bottom]="activeEnabled">
+        <div class="absolute full-height full-width primary-background"></div>
+    </div>
+</div>
+
+<div class="host relative">
+    <div class="logo">
+        <img src="content/assets/images/logo.svg"/>
+    </div>
+
+    <div class="menu">
+        <div class="menuitem"
+             routerLink="/"
+             routerLinkActive="active"
+             [routerLinkActiveOptions]="{exact: true}"
+             (click)="setActive($event.target)">
+            <span class="fa fa-3x fa-calendar-alt"></span>
+        </div>
+
+        <div class="menuitem"
+             routerLink="/attendance"
+             routerLinkActive="active"
+             (click)="setActive($event.target)">
+            <span class="fa fa-3x fa-list"></span>
+        </div>
+
+        <div class="menuitem"
+             routerLink="/massReport"
+             routerLinkActive="active"
+             (click)="setActive($event.target)">
+            <span class="fa fa-3x fa-magic"></span>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="menuitem" routerLink="/massReport">
+            <span class="fa fa-3x fa-cog"></span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="container main relative">
+
+    <div class="content relative" [@routeAnimations]="routeComponentState">
+        <navigation *ngIf="navigationVisible" [componentState]="navigationState"></navigation>
+        
+        <div class="main-content">
+            <router-outlet #outlet="outlet"></router-outlet>
+        </div>
+    </div>
+</div>

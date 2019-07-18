@@ -1,0 +1,35 @@
+{
+    "compilerOptions":
+    {
+        "target": "es2015",
+        "module": "esnext",
+        "sourceMap": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "removeComments": true,
+        "noImplicitAny": false,
+        "noUnusedLocals": true,
+        "strictNullChecks": false,
+        "moduleResolution": "node",
+        "outDir": "wwwroot/app",
+        "lib":
+        [
+            "es2016",
+            "dom"
+        ],
+        "types":
+        [
+            "node"
+        ],
+        "plugins":
+        [
+            {
+                "name": "@angular/language-service"
+            }
+        ]
+    },
+    "exclude":
+    [
+        "node_modules"
+    ]
+}
